@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="601.0" maxWidth="1049.0" prefHeight="601.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.MainGameController">
+   <children>
+      <ImageView fitHeight="601.0" fitWidth="1049.0">
+         <image>
+            <Image url="@ImageBackground.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="Coins" fill="GOLD" layoutX="912.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="137.0">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="LevelAn" fill="RED" layoutX="912.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="137.0">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Text>
+      <Button layoutX="832.0" layoutY="537.0" mnemonicParsing="false" onAction="#btnSpielen" prefHeight="33.0" prefWidth="149.0" text="Spielen" textFill="#39bcbc">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font></Button>
+      <TextField fx:id="inputEinsatz" layoutX="832.0" layoutY="502.0" onKeyTyped="#maxCheck" promptText="Einsatz:" />
+      <Button layoutX="997.0" layoutY="100.0" mnemonicParsing="false" onAction="#btnShop" text="Shop" textFill="#1a8890">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <Button layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#btnLoggOut" text="Logout" textFill="#35c9b3">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <Text fx:id="LoggedInUser" fill="AQUA" layoutX="152.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="#00eeff" layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LoggedIn:" wrappingWidth="128.29443359375">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="376.0" fitWidth="845.0" layoutX="118.0" layoutY="113.0">
+         <image>
+            <Image url="@ImageCasiono%20R4.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="XDslot2" layoutX="452.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageXD.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="XDslot3" layoutX="637.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageXD.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="XDslot1" layoutX="266.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageXD.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="TraubeSlot1" layoutX="266.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageTraube.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="TraubeSlot2" layoutX="452.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageTraube.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="TraubeSlot3" layoutX="637.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageTraube.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="KleeSlot1" layoutX="266.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageKleeblatt.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="KLeeSlot2" layoutX="452.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageKleeblatt.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="KleeSlot3" layoutX="637.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageKleeblatt.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="KirscheSlot1" layoutX="266.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageKirsche.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="KirschSlot2" layoutX="454.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageKirsche.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="KirschSlot3" layoutX="637.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageKirsche.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="HufSlot1" layoutX="266.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageHuf.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="HufSlot2" layoutX="454.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageHuf.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="HufSlot3" layoutX="637.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageHuf.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="GlockeSlot1" layoutX="266.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageGlocke.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="GlockeSlot2" layoutX="454.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageGlocke.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="GlockeSlot3" layoutX="637.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageGlocke.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="HerzSlot1" layoutX="266.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageHerz.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="HerzSlot2" layoutX="454.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageHerz.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="HerzSlot3" layoutX="637.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageHerz.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sevenSlot1" layoutX="266.0" layoutY="214.0">
+         <image>
+            <Image url="@Image7.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sevenSlot2" layoutX="454.0" layoutY="214.0">
+         <image>
+            <Image url="@Image7.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sevenSlot3" layoutX="637.0" layoutY="214.0">
+         <image>
+            <Image url="@Image7.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="DiaSlot2" layoutX="454.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageDaimond.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="DiaSlot3" layoutX="637.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageDaimond.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="DiaSlot1" layoutX="266.0" layoutY="214.0">
+         <image>
+            <Image url="@ImageDaimond.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="Erreicht" layoutX="326.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="425.1787109375">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#002f05" />
+                  <Stop color="LIME" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+         <font>
+            <Font name="Felix Titling" size="59.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

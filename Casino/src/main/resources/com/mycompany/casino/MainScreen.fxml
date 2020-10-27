@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="601.0" maxWidth="1049.0" prefHeight="601.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.MainScreenController">
+   <children>
+      <ImageView fitHeight="601.0" fitWidth="1049.0" layoutX="-1.0">
+         <image>
+            <Image url="@ImageBackground.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="207.0" fitWidth="328.0" layoutX="361.0" layoutY="197.0">
+         <image>
+            <Image url="@ImageCasiono%20R4.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="490.0" layoutY="262.0" mnemonicParsing="false" onAction="#btnLogin" text="Login">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5142857142857142" radius="0.41860465116279066">
+               <stops>
+                  <Stop color="#04ff5c" />
+                  <Stop color="#044a0b" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Button>
+      <Button layoutX="436.0" layoutY="308.0" mnemonicParsing="false" onAction="#btnRegistrieren" prefHeight="25.0" prefWidth="178.0" text="Jetzt registrieren">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5428571428571428" radius="0.5">
+               <stops>
+                  <Stop color="#04ff5c" />
+                  <Stop color="#10721a" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
