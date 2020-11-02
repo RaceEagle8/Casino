@@ -5,6 +5,7 @@ com\mycompany\casino\FehlerDateRegistrationController.class
 com\mycompany\casino\FehlerBeiLoginController.class
 com\mycompany\casino\FehlerPWVController.class
 module-info.class
+com\mycompany\casino\ShopViewController.class
 com\mycompany\casino\FehlerDarfLoginController.class
 com\mycompany\casino\PWVergessenController.class
 com\mycompany\casino\FehlerPassword2RegistrationController.class

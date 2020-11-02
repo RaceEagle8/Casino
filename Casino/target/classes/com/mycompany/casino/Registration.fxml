@@ -31,7 +31,7 @@
          <font>
             <Font name="System Bold Italic" size="19.0" />
          </font></TextField>
-      <Text layoutX="381.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration:" textAlignment="CENTER" underline="true">
+      <Text layoutX="369.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrierung:" textAlignment="CENTER" underline="true">
          <font>
             <Font name="Constantia Bold" size="46.0" />
          </font>
@@ -44,6 +44,20 @@
             </RadialGradient>
          </fill>
       </Text>
+      <PasswordField fx:id="intputPassword1" layoutX="413.0" layoutY="312.0" prefHeight="46.0" prefWidth="213.0" promptText="Passwort:">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </PasswordField>
+      <PasswordField fx:id="inputPasswort2" layoutX="413.0" layoutY="367.0" prefHeight="46.0" prefWidth="213.0" promptText="Passwort wiederholen:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="dateBDay" layoutX="382.0" layoutY="421.0" prefHeight="46.0" prefWidth="276.0" promptText="GeburtsTag Tag.Monat.Jahr">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></TextField>
       <Button layoutX="985.0" layoutY="547.0" mnemonicParsing="false" onAction="#btnOkRegistration" text="OK">
          <font>
             <Font name="System Bold Italic" size="18.0" />
@@ -68,19 +82,8 @@
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font></Button>
-      <TextField fx:id="dateBDay" layoutX="382.0" layoutY="421.0" prefHeight="46.0" prefWidth="276.0" promptText="GeburtsTag Tag.Monat.Jahr">
-         <font>
-            <Font name="System Bold Italic" size="15.0" />
-         </font></TextField>
-      <PasswordField fx:id="intputPassword1" layoutX="413.0" layoutY="312.0" prefHeight="46.0" prefWidth="213.0" promptText="Passwort:">
-         <font>
-            <Font name="System Bold Italic" size="19.0" />
-         </font>
-      </PasswordField>
-      <PasswordField fx:id="inputPasswort2" layoutX="413.0" layoutY="367.0" prefHeight="46.0" prefWidth="213.0" promptText="Passwort wiederholen:">
-         <font>
-            <Font name="System Bold Italic" size="18.0" />
-         </font>
-      </PasswordField>
+      
+      
+      
    </children>
 </AnchorPane>

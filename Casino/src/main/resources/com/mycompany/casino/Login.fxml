@@ -30,17 +30,17 @@
          <font>
             <Font name="System Bold" size="15.0" />
          </font></TextField>
+      <PasswordField fx:id="inputPasswordLogin" layoutX="425.0" layoutY="317.0" prefHeight="41.0" prefWidth="200.0" promptText="Passwort:">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </PasswordField>
+      <Button layoutX="993.0" layoutY="561.0" mnemonicParsing="false" onAction="#btnOKLogin" text="OK" textFill="#2a8d8a" />
       <Button contentDisplay="TEXT_ONLY" layoutX="432.0" layoutY="370.0" mnemonicParsing="false" onAction="#btnPasswortVergessenLogin" prefHeight="41.0" prefWidth="184.0" text="Passwort vergessen" textFill="#0c08ee" underline="true">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Button>
       <Button layoutX="14.0" layoutY="561.0" mnemonicParsing="false" onAction="#btnBackLogin" text="Zurück" textFill="#2ebcbc" />
-      <Button layoutX="993.0" layoutY="561.0" mnemonicParsing="false" onAction="#btnOKLogin" text="OK" textFill="#2a8d8a" />
-      <PasswordField fx:id="inputPasswordLogin" layoutX="425.0" layoutY="317.0" prefHeight="41.0" prefWidth="200.0" promptText="Passwort:">
-         <font>
-            <Font name="System Bold Italic" size="15.0" />
-         </font>
-      </PasswordField>
    </children>
 </AnchorPane>

@@ -129,8 +129,7 @@ public class MainGameController implements Initializable {
 
     @FXML
     private void btnShop(ActionEvent event) throws IOException {
-        //Lässt sachen erscheinen oder verschwinden
-        //LoggedInUser.setVisible(false);
+        App.setRoot("ShopView");
         
         
         
@@ -295,7 +294,7 @@ public class MainGameController implements Initializable {
             HerzSlot2.setVisible(true);
            
         }
-        else if(slottwo == 5){
+        else if(slottwo == 5){ 
             KirschSlot2.setVisible(true);
             
         }
@@ -545,8 +544,9 @@ public class MainGameController implements Initializable {
                 
                 Reload();
                 if(user.getCoins() <= 0){
-                    Erreicht.setText(" + 1000 COINS");
+                    Erreicht.setText(" + 1000 COINS FREE");
                     user.setCoins(user.getCoins() + 1000);
+                    
                 }
                 System.out.println("Minus");
                 return;
