@@ -25,6 +25,8 @@ public class ShopViewController implements Initializable {
     private Text CoinsShop;
     @FXML
     private Button btnRouletteID;
+    @FXML
+    private Button btnWuerfelnID;
 
     /**
      * Initializes the controller class.
@@ -46,6 +48,10 @@ public class ShopViewController implements Initializable {
     @FXML
     private void btnRoulette(ActionEvent event) throws IOException {
         App.setRoot("RHomeScreenView");
+    }
+
+    @FXML
+    private void btnWuerfln(ActionEvent event) {
     }
     
     

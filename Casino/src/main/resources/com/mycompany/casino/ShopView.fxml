@@ -35,5 +35,6 @@
          </font>
       </Text>
       <Button fx:id="btnRouletteID" layoutX="80.0" layoutY="61.0" mnemonicParsing="false" onAction="#btnRoulette" prefHeight="79.0" prefWidth="152.0" text="Roulette" />
+      <Button fx:id="btnWuerfelnID" layoutX="474.0" layoutY="61.0" mnemonicParsing="false" onAction="#btnWuerfln" prefHeight="79.0" prefWidth="152.0" text="Würfeln" />
    </children>
 </AnchorPane>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.WuerfelGameViewController">
+   <children>
+      <ImageView fitHeight="338.0" fitWidth="610.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/casino_wuerfel_background.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#00eeff" layoutX="262.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Würfeln">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="sechsR" fitHeight="150.0" fitWidth="200.0" layoutX="357.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/6augen.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sechsL" fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/6augen.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fuenfL" fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/5augen.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fuenfR" fitHeight="150.0" fitWidth="200.0" layoutX="357.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/5augen.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="vierL" fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/4augen.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="vierR" fitHeight="150.0" fitWidth="200.0" layoutX="357.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/4augen.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dreiL" fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/3augen.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dreiR" fitHeight="150.0" fitWidth="200.0" layoutX="357.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/3augen.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zweiL" fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/2augen.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zweiR" fitHeight="150.0" fitWidth="200.0" layoutX="357.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/2augen.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="einsL" fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/1augen.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="einsR" fitHeight="150.0" fitWidth="200.0" layoutX="357.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/1augen.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="CoinsWG" layoutX="466.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.43333333333333335" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#0044ff" />
+                  <Stop color="#00fffb" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <TextField fx:id="inputEinsatzW" layoutX="14.0" layoutY="91.0" promptText="Einsatz:" />
+   </children>
+</AnchorPane>

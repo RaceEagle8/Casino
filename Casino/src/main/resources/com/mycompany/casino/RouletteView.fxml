@@ -11,7 +11,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.RouletteViewController">
    <children>
@@ -20,7 +23,7 @@
             <Image url="@Roulette%20Hintergrund2.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="401.0" fitWidth="393.0" layoutX="157.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="RouletteRad" fitHeight="401.0" fitWidth="393.0" layoutX="157.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Roulette%20Rad.png" />
          </image>
@@ -55,10 +58,14 @@
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Button>
-      <TextField fx:id="tfRandomNumber" editable="false" layoutX="336.0" layoutY="137.0" prefHeight="25.0" prefWidth="36.0" />
-      <Label layoutX="310.0" layoutY="31.0" prefHeight="22.0" prefWidth="89.0" text="ROULETTE" textFill="RED">
+      <ImageView fitHeight="51.0" fitWidth="77.0" layoutX="316.0" layoutY="5.0" rotate="90.0">
+         <image>
+            <Image url="@PfeilNIce.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="254.0" layoutY="-11.0" prefHeight="68.0" prefWidth="200.0" text="ROULETTE" textAlignment="CENTER" textFill="RED">
          <font>
-            <Font name="Comic Sans MS Bold Italic" size="15.0" />
+            <Font name="Comic Sans MS Bold Italic" size="36.0" />
          </font>
       </Label>
       <ImageView fx:id="imgBlackCircle" fitHeight="51.0" fitWidth="54.0" layoutX="372.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true" visible="false">
@@ -80,5 +87,18 @@
          </effect>
       </Label>
       <TextField fx:id="tfEinsatz" layoutX="531.0" layoutY="313.0" onKeyPressed="#keyEinsatz" promptText="Einsatz" />
+      <Text fx:id="tfRandomNumber" layoutX="337.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="34.0">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5465116279069767">
+               <stops>
+                  <Stop color="RED" />
+                  <Stop color="#970000" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
    </children>
 </AnchorPane>

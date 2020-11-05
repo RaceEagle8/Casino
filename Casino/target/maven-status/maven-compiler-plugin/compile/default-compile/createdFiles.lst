@@ -14,6 +14,7 @@ com\mycompany\casino\RegistrationController.class
 com\mycompany\casino\LoginController.class
 com\mycompany\casino\FehlerBeiLoginController.class
 module-info.class
+com\mycompany\casino\WuerfelGameViewController.class
 com\mycompany\casino\FehlerPassword2RegistrationController.class
 com\mycompany\casino\FehlerEMailRegistrationController.class
 com\mycompany\casino\FehlerPasswordsRegistrationController.class

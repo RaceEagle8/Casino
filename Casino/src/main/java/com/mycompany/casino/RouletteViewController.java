@@ -11,6 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.text.Text;
 
 
 /**
@@ -28,6 +29,9 @@ public class RouletteViewController implements Initializable {
     
     public User RouletteUser;
     
+    @FXML
+    private ImageView RouletteRad;
+    
     
     /**
      * Initializes the controller class.
@@ -39,9 +43,11 @@ public class RouletteViewController implements Initializable {
         
         for(User user : App.getAllUsers()){
             
-            CoinsUser.setText("Coins: " + String.valueOf(user.getCoins()));
+            if(user.getLoggedIn() == true){
+                CoinsUser.setText("Coins: " + String.valueOf(user.getCoins()));
             
-            RouletteUser = user;
+                 RouletteUser = user;
+            }
             
         }
         
@@ -65,7 +71,7 @@ public class RouletteViewController implements Initializable {
    
     
     @FXML
-    public TextField tfRandomNumber;
+    public Text tfRandomNumber;
     
     public void random1(){
        Random randomNumber1 = new Random();
@@ -73,6 +79,121 @@ public class RouletteViewController implements Initializable {
        rouletteNumber = 0 + randomNumber1.nextInt(37);
        System.out.println(rouletteNumber);
        tfRandomNumber.setText(String.valueOf(rouletteNumber)); // int Wert wird als String in das Textfeld geschrieben
+       
+       if(rouletteNumber == 00){
+           
+       }
+       else if(rouletteNumber == 0){
+           
+       }
+       else if(rouletteNumber == 1){
+           RouletteRad.setRotate(10);
+       }
+       else if(rouletteNumber == 2){
+           RouletteRad.setRotate(-120);
+       }
+       else if(rouletteNumber == 3){
+           RouletteRad.setRotate(35);
+       }
+       else if(rouletteNumber == 4){
+           RouletteRad.setRotate(-75);
+       }
+       else if(rouletteNumber == 5){
+           RouletteRad.setRotate(85);
+       }
+       else if(rouletteNumber == 6){
+           RouletteRad.setRotate(-50);
+       }
+       else if(rouletteNumber == 7){
+           RouletteRad.setRotate(75);
+       }
+       else if(rouletteNumber == 8){
+           RouletteRad.setRotate(-35);
+       }
+       else if(rouletteNumber == 9){
+           
+       }
+       else if(rouletteNumber == 10){
+           
+       }
+       else if(rouletteNumber == 11){
+           
+       }
+       else if(rouletteNumber == 12){
+           
+       }
+       else if(rouletteNumber == 13){
+           
+       }
+       else if(rouletteNumber == 14){
+           
+       }
+       else if(rouletteNumber == 15){
+           
+       }
+       else if(rouletteNumber == 16){
+           
+       }
+       else if(rouletteNumber == 17){
+           
+       }
+       else if(rouletteNumber == 18){
+           
+       }
+       else if(rouletteNumber == 19){
+           
+       }
+       else if(rouletteNumber == 20){
+           
+       }
+       else if(rouletteNumber == 21){
+           
+       }
+       else if(rouletteNumber == 22){
+           
+       }
+       else if(rouletteNumber == 23){
+           
+       }
+       else if(rouletteNumber == 24){
+           
+       }
+       else if(rouletteNumber == 25){
+           
+       }
+       else if(rouletteNumber == 26){
+           
+       }
+       else if(rouletteNumber == 27){
+           
+       }
+       else if(rouletteNumber == 28){
+           
+       }
+       else if(rouletteNumber == 29){
+           
+       }
+       else if(rouletteNumber == 30){
+           
+       }
+       else if(rouletteNumber == 31){
+           
+       }
+       else if(rouletteNumber == 32){
+           
+       }
+       else if(rouletteNumber == 33){
+           
+       }
+       else if(rouletteNumber == 34){
+           
+       }
+       else if(rouletteNumber == 35){
+           
+       }
+       
+       
+       
     }
 
 
@@ -107,7 +228,14 @@ public class RouletteViewController implements Initializable {
     }
         
         
+    public void refreshCoins(){
         
+        CoinsUser.setText("Coins: " + String.valueOf(RouletteUser.getCoins()));
+        
+    }
+    
+    
+    
     
 
     @FXML
