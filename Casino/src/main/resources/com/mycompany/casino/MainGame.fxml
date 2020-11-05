@@ -12,7 +12,7 @@
 
 <AnchorPane id="AnchorPane" maxHeight="601.0" maxWidth="1049.0" prefHeight="601.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.MainGameController">
    <children>
-      <ImageView fitHeight="601.0" fitWidth="1049.0">
+      <ImageView fitHeight="601.0" fitWidth="1089.0">
          <image>
             <Image url="@ImageBackground.png" />
          </image>
@@ -32,7 +32,7 @@
             <Font name="System Bold Italic" size="16.0" />
          </font></Button>
       <TextField fx:id="inputEinsatz" layoutX="832.0" layoutY="502.0" onKeyTyped="#maxCheck" promptText="Einsatz:" />
-      <Button layoutX="997.0" layoutY="100.0" mnemonicParsing="false" onAction="#btnShop" text="Shop" textFill="#1a8890">
+      <Button layoutX="997.0" layoutY="100.0" mnemonicParsing="false" onAction="#btnShop" text="SpielAuswahl" textFill="#1a8890">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font></Button>

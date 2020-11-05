@@ -9,8 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="1049.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.mycompany.casino.ShopViewController">
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.ShopViewController">
    <children>
       <ImageView fitHeight="602.0" fitWidth="1049.0">
          <image>
@@ -35,5 +34,6 @@
             <Font name="System Bold Italic" size="35.0" />
          </font>
       </Text>
+      <Button fx:id="btnRouletteID" layoutX="80.0" layoutY="61.0" mnemonicParsing="false" onAction="#btnRoulette" prefHeight="79.0" prefWidth="152.0" text="Roulette" />
    </children>
 </AnchorPane>

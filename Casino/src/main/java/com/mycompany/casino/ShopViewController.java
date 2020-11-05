@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 
 /**
@@ -22,6 +23,8 @@ public class ShopViewController implements Initializable {
 
     @FXML
     private Text CoinsShop;
+    @FXML
+    private Button btnRouletteID;
 
     /**
      * Initializes the controller class.
@@ -38,6 +41,11 @@ public class ShopViewController implements Initializable {
     @FXML
     private void btnBackShop(ActionEvent event) throws IOException {
         App.setRoot("MainGame");
+    }
+
+    @FXML
+    private void btnRoulette(ActionEvent event) throws IOException {
+        App.setRoot("RHomeScreenView");
     }
     
     
