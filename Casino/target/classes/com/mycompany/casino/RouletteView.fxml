@@ -71,7 +71,7 @@
             <Image url="@roter%20Kreis.png" />
          </image>
       </ImageView>
-      <Label layoutX="561.0" layoutY="13.0" text="Coins:" textFill="RED">
+      <Label fx:id="CoinsUser" layoutX="561.0" layoutY="13.0" textFill="RED">
          <font>
             <Font name="Comic Sans MS Bold" size="24.0" />
          </font>
@@ -79,5 +79,6 @@
             <Bloom threshold="0.0" />
          </effect>
       </Label>
+      <TextField fx:id="tfEinsatz" layoutX="531.0" layoutY="313.0" onKeyPressed="#keyEinsatz" promptText="Einsatz" />
    </children>
 </AnchorPane>
