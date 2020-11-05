@@ -1,0 +1,4 @@
+module-info.class
+com\mycompany\roulette\RHomeScreenViewController.class
+com\mycompany\roulette\RouletteViewController.class
+com\mycompany\roulette\App.class
