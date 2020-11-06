@@ -64,14 +64,10 @@ public class RouletteViewController implements Initializable {
     @FXML
     private void btnStartRoulette(ActionEvent event) {
         random1();
-        random2();
         test();
     }
     
-   
-    //Fix
-    // blyat
-    
+  
     
     @FXML
     public Text tfRandomNumber;
@@ -207,23 +203,7 @@ public class RouletteViewController implements Initializable {
     public ImageView imgBlackCircle;
    
     
-    public void random2(){
-        Random randomNumber2 = new Random();
-        int blackOrRed;
-        blackOrRed = 0 + randomNumber2.nextInt(2);
-        //System.out.println(blackOrRed);
-
-        if(blackOrRed == 1){
-            System.out.println("ROT"); 
-            imgRedCircle.setVisible(true);
-            imgBlackCircle.setVisible(false);
-        }
-        else{
-            System.out.println("SCHWARZ");
-            imgBlackCircle.setVisible(true);
-            imgRedCircle.setVisible(false);
-        }
-    }
+   
         
     public void test(){
         if(imgRedCircle.isVisible() == true){
@@ -260,7 +240,7 @@ public class RouletteViewController implements Initializable {
         if((RouletteUser.getCoins() - Max) < 0){
                     tfEinsatz.setText(String.valueOf(RouletteUser.getCoins()));
                 }
-        
+
         
     }
     
