@@ -69,6 +69,8 @@ public class RouletteViewController implements Initializable {
     }
     
    
+    //Fix
+    
     
     @FXML
     public Text tfRandomNumber;
