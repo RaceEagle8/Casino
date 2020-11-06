@@ -16,19 +16,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.RouletteViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.RouletteViewController">
    <children>
-      <ImageView fitHeight="403.0" fitWidth="715.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="761.0" fitWidth="1201.0" layoutX="-129.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Roulette%20Hintergrund2.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="RouletteRad" fitHeight="401.0" fitWidth="393.0" layoutX="157.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="RouletteRad" fitHeight="401.0" fitWidth="393.0" layoutX="305.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Roulette%20Rad.png" />
          </image>
       </ImageView>
-      <Button layoutX="328.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnStartRoulette" prefHeight="32.0" prefWidth="51.0" text="Start!">
+      <Button layoutX="476.0" layoutY="290.0" mnemonicParsing="false" onAction="#btnStartRoulette" prefHeight="32.0" prefWidth="51.0" text="Start!">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -43,51 +43,22 @@
             </Lighting>
          </effect>
       </Button>
-      <Button layoutX="14.0" layoutY="358.0" mnemonicParsing="false" onAction="#btnGoBackToHome" text="Verlassen">
-         <effect>
-            <Lighting diffuseConstant="1.11" specularConstant="0.0" specularExponent="0.0" surfaceScale="3.25">
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant azimuth="40.81" color="RED" />
-               </light>
-            </Lighting>
-         </effect>
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="51.0" fitWidth="77.0" layoutX="316.0" layoutY="5.0" rotate="90.0">
+      <ImageView fitHeight="51.0" fitWidth="77.0" layoutX="464.0" layoutY="112.0" rotate="90.0">
          <image>
             <Image url="@PfeilNIce.png" />
          </image>
       </ImageView>
-      <Label layoutX="254.0" layoutY="-11.0" prefHeight="68.0" prefWidth="200.0" text="ROULETTE" textAlignment="CENTER" textFill="RED">
-         <font>
-            <Font name="Comic Sans MS Bold Italic" size="36.0" />
-         </font>
-      </Label>
-      <ImageView fx:id="imgBlackCircle" fitHeight="51.0" fitWidth="54.0" layoutX="372.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imgBlackCircle" fitHeight="51.0" fitWidth="54.0" layoutX="520.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@schwarzer%20Kreis.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="imgRedCircle" fitHeight="62.0" fitWidth="67.0" layoutX="280.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true" visible="false">
+      <ImageView fx:id="imgRedCircle" fitHeight="62.0" fitWidth="67.0" layoutX="428.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@roter%20Kreis.png" />
          </image>
       </ImageView>
-      <Label fx:id="CoinsUser" layoutX="561.0" layoutY="13.0" textFill="RED">
-         <font>
-            <Font name="Comic Sans MS Bold" size="24.0" />
-         </font>
-         <effect>
-            <Bloom threshold="0.0" />
-         </effect>
-      </Label>
-      <TextField fx:id="tfEinsatz" layoutX="531.0" layoutY="313.0" onKeyPressed="#keyEinsatz" promptText="Einsatz" />
-      <Text fx:id="tfRandomNumber" layoutX="337.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="34.0">
+      <Text fx:id="tfRandomNumber" layoutX="485.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="34.0">
          <font>
             <Font name="System Bold Italic" size="27.0" />
          </font>
@@ -100,5 +71,34 @@
             </RadialGradient>
          </fill>
       </Text>
+      <Button layoutX="17.0" layoutY="526.0" mnemonicParsing="false" onAction="#btnGoBackToHome" prefHeight="47.0" prefWidth="146.0" text="Verlassen">
+         <effect>
+            <Lighting diffuseConstant="1.11" specularConstant="0.0" specularExponent="0.0" surfaceScale="3.25">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="40.81" color="RED" />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="CoinsUser" layoutX="778.0" layoutY="19.0" prefHeight="35.0" prefWidth="181.0" textFill="RED">
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.0" />
+         </effect>
+      </Label>
+      <Label layoutX="348.0" layoutY="-4.0" prefHeight="74.0" prefWidth="304.0" text="ROULETTE" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="52.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfEinsatz" layoutX="800.0" layoutY="537.0" onKeyPressed="#keyEinsatz" promptText="Einsatz" />
    </children>
 </AnchorPane>
