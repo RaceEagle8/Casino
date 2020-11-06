@@ -230,7 +230,8 @@ public class RouletteViewController implements Initializable {
             
         }
     }
-        
+     
+    //Refresh die Coin Anzeige
         
     public void refreshCoins(){
         
