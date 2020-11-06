@@ -70,6 +70,7 @@ public class RouletteViewController implements Initializable {
     
    
     //Fix
+    // blyat
     
     
     @FXML
