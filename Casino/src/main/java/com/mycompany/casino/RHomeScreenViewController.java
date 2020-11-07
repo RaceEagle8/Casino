@@ -11,5 +11,10 @@ public class RHomeScreenViewController {
     public void btnGoToGame(ActionEvent event) throws IOException {
         App.setRoot("RouletteView");
     }
+
+    @FXML
+    private void btnGoToShop(ActionEvent event) throws IOException {
+        App.setRoot("ShopView"); 
+    }
     
 }
