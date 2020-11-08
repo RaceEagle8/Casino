@@ -47,7 +47,14 @@ public class RouletteViewController implements Initializable {
     private Button startRoulette;
     
     @FXML
+    private Button einsatzButton;
+  
+    @FXML
+    private Button wettenButton;
+    
+    @FXML
     private TextField tfWetten;
+    
     
   
     
@@ -305,7 +312,7 @@ public class RouletteViewController implements Initializable {
     private void keyWetten(KeyEvent event) {
         int Max = IntCheckWetten();
         
-        if(Max >= 36){
+        if(Max > 36){
             
             tfWetten.setText("");
         }
@@ -314,8 +321,9 @@ public class RouletteViewController implements Initializable {
             tfWetten.setText("");
         }
         
-        
     }
+    
+    
     
     public int IntCheckWetten(){
 
@@ -343,8 +351,12 @@ public class RouletteViewController implements Initializable {
     private void keyEinsatz(KeyEvent event) {
         int Max = IntCheckEinsatz();
         
-        if(Max == 0){
+        if(Max <= 0){
             tfEinsatz.setText("");
+            einsatzButton.setVisible(false);
+        }
+        else{
+            einsatzButton.setVisible(true);
         }
         
         if(Max >= 10000){
@@ -380,18 +392,21 @@ public class RouletteViewController implements Initializable {
     
     
     
-     //Refresh die Coin Anzeige
-        
+     //Refresh die Coin Anzeige  
     public void refreshCoins(){
-        
         CoinsUser.setText("Coins: " + String.valueOf(RouletteUser.getCoins()));
-        startRoulette.setVisible(true);
-        
+        wettenButton.setVisible(true);
     }
+    
+    
 
     @FXML
-    private void btnConfBet(ActionEvent event) {
+    private void btnEinsatz(ActionEvent event) {
+        
         CoinsAbzug();
+        einsatzButton.setVisible(false);
+        
+  
     }
     
     public void CoinsAbzug(){
@@ -408,7 +423,22 @@ public class RouletteViewController implements Initializable {
         
         refreshCoins();
         
+        if(UserCoins == 0){
+            einsatzButton.setVisible(false);
+            wettenButton.setVisible(false);
+            startRoulette.setVisible(false);
+        }
+        
+        
+        
     }
 
+    @FXML
+    private void btnWette(ActionEvent event) {
+        startRoulette.setVisible(true);
+        wettenButton.setVisible(false);
+    }
+
+
  
-}
+} 
