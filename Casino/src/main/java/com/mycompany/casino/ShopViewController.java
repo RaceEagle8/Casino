@@ -47,7 +47,7 @@ public class ShopViewController implements Initializable {
 
     @FXML
     private void btnRoulette(ActionEvent event) throws IOException {
-        App.setRoot("RHomeScreenView");
+        App.setRoot("RouletteView");
     }
 
     @FXML

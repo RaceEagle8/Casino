@@ -47,7 +47,14 @@ public class RouletteViewController implements Initializable {
     private Button startRoulette;
     
     @FXML
+    private Button einsatzButton;
+  
+    @FXML
+    private Button wettenButton;
+    
+    @FXML
     private TextField tfWetten;
+    
     
   
     
@@ -305,17 +312,20 @@ public class RouletteViewController implements Initializable {
     private void keyWetten(KeyEvent event) {
         int Max = IntCheckWetten();
         
-        if(Max >= 36){
+        if(Max > 36){
             
-            tfWetten.setText("");
+            tfWetten.clear();
+            return;
         }
         
         if(Max == -1){
             tfWetten.setText("");
+            return;
         }
         
-        
     }
+    
+    
     
     public int IntCheckWetten(){
 
@@ -326,6 +336,11 @@ public class RouletteViewController implements Initializable {
 
            int Wetten = iWetten;
 
+           if(Wetten > 36){
+               tfWetten.clear();
+           }
+           
+           
            return Wetten;
        }
        catch(NumberFormatException error)
@@ -343,8 +358,12 @@ public class RouletteViewController implements Initializable {
     private void keyEinsatz(KeyEvent event) {
         int Max = IntCheckEinsatz();
         
-        if(Max == 0){
+        if(Max <= 0){
             tfEinsatz.setText("");
+            einsatzButton.setVisible(false);
+        }
+        else{
+            einsatzButton.setVisible(true);
         }
         
         if(Max >= 10000){
@@ -353,8 +372,14 @@ public class RouletteViewController implements Initializable {
         
         
         if((RouletteUser.getCoins() - Max) < 0){
-                    tfEinsatz.setText(String.valueOf(RouletteUser.getCoins()));
-                }
+            tfEinsatz.setText(String.valueOf(RouletteUser.getCoins()));
+            
+            
+            if(tfEinsatz.getText().equals("0")){
+                tfEinsatz.clear();
+            }
+            
+        }
     }
     
     
@@ -380,18 +405,40 @@ public class RouletteViewController implements Initializable {
     
     
     
-     //Refresh die Coin Anzeige
-        
+     //Refresh die Coin Anzeige  
     public void refreshCoins(){
-        
         CoinsUser.setText("Coins: " + String.valueOf(RouletteUser.getCoins()));
-        startRoulette.setVisible(true);
-        
+        wettenButton.setVisible(true);
     }
+    
+    
 
     @FXML
-    private void btnConfBet(ActionEvent event) {
+    private void btnEinsatz(ActionEvent event) {
+        
+        if(tfEinsatz.getText().equals("0")||tfEinsatz.getText().equals("")){
+            return;
+        }
+        
+        
+        
+        int Max = IntCheckEinsatz();
+        
+        if((RouletteUser.getCoins() - Max) < 0){
+            tfEinsatz.setText(String.valueOf(RouletteUser.getCoins()));
+
+            if(tfEinsatz.getText().equals("0")){
+                tfEinsatz.setText("");
+            }
+            
+            return;
+        }
+
+        
         CoinsAbzug();
+        einsatzButton.setVisible(false);
+        
+  
     }
     
     public void CoinsAbzug(){
@@ -408,7 +455,36 @@ public class RouletteViewController implements Initializable {
         
         refreshCoins();
         
+        if(UserCoins == 0){
+            einsatzButton.setVisible(false);
+            wettenButton.setVisible(false);
+            startRoulette.setVisible(false);
+        }
+        
+        
+        
     }
 
+    @FXML
+    private void btnWette(ActionEvent event) {
+        
+        int Max = IntCheckEinsatz();
+        
+        if(Max > 36 || Max < 0){
+            tfWetten.setText("");
+            return;
+        }
+        
+        
+        if(tfWetten.getText().equals("")){
+            return;
+        }
+        
+        
+        startRoulette.setVisible(true);
+        wettenButton.setVisible(false);
+    }
+
+
  
-}
+} 

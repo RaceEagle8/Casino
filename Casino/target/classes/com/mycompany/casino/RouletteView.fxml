@@ -99,8 +99,9 @@
             <Font name="Comic Sans MS Bold Italic" size="52.0" />
          </font>
       </Label>
-      <TextField fx:id="tfEinsatz" layoutX="253.0" layoutY="537.0" onKeyPressed="#keyEinsatz" promptText="Einsatz" />
-      <Button layoutX="411.0" layoutY="537.0" mnemonicParsing="false" onAction="#btnConfBet" text="Bestädtigen" />
-      <TextField fx:id="tfWetten" layoutX="546.0" layoutY="537.0" onKeyPressed="#keyWetten" promptText="Wette" />
+      <TextField fx:id="tfEinsatz" layoutX="253.0" layoutY="537.0" onKeyTyped="#keyEinsatz" promptText="Einsatz" />
+      <Button fx:id="einsatzButton" layoutX="411.0" layoutY="537.0" mnemonicParsing="false" onAction="#btnEinsatz" text="Bestätigen" visible="false" />
+      <TextField fx:id="tfWetten" layoutX="546.0" layoutY="537.0" onKeyTyped="#keyWetten" promptText="Wette" />
+      <Button fx:id="wettenButton" layoutX="706.0" layoutY="537.0" mnemonicParsing="false" onAction="#btnWette" text="Bestätigen" visible="false" />
    </children>
 </AnchorPane>
