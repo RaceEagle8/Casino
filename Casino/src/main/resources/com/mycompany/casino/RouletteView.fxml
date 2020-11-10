@@ -99,9 +99,35 @@
             <Font name="Comic Sans MS Bold Italic" size="52.0" />
          </font>
       </Label>
-      <TextField fx:id="tfEinsatz" layoutX="253.0" layoutY="537.0" onKeyTyped="#keyEinsatz" promptText="Einsatz" />
-      <Button fx:id="einsatzButton" layoutX="411.0" layoutY="537.0" mnemonicParsing="false" onAction="#btnEinsatz" text="Bestätigen" visible="false" />
-      <TextField fx:id="tfWetten" layoutX="546.0" layoutY="537.0" onKeyTyped="#keyWetten" promptText="Wette" />
-      <Button fx:id="wettenButton" layoutX="706.0" layoutY="537.0" mnemonicParsing="false" onAction="#btnWette" text="Bestätigen" visible="false" />
+      <TextField fx:id="tfEinsatz" layoutX="274.0" layoutY="525.0" onKeyTyped="#keyEinsatz" promptText="Einsatz" />
+      <Button fx:id="einsatzButton" layoutX="428.0" layoutY="525.0" mnemonicParsing="false" onAction="#btnEinsatz" text="Bestätigen" visible="false" />
+      <TextField fx:id="tfWetten" layoutX="578.0" layoutY="525.0" onKeyTyped="#keyWetten" promptText="Wette" />
+      <Button fx:id="wettenButton" layoutX="733.0" layoutY="525.0" mnemonicParsing="false" onAction="#btnWette" text="Bestätigen" visible="false" />
+      <Text fx:id="tfBigWin1" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIG WIN!" visible="false" wrappingWidth="393.0">
+         <font>
+            <Font size="96.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5166666666666667" centerY="0.6428571428571429" radius="0.5">
+               <stops>
+                  <Stop color="RED" />
+                  <Stop color="#0090ff" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <Text fx:id="tfBigWin2" layoutX="609.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIG WIN!" visible="false" wrappingWidth="393.0">
+         <font>
+            <Font size="96.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5166666666666667" centerY="0.6428571428571429" radius="0.5">
+               <stops>
+                  <Stop color="RED" />
+                  <Stop color="#0090ff" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
    </children>
 </AnchorPane>
