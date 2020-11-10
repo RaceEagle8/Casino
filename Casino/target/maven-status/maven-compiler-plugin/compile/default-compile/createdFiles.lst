@@ -7,7 +7,6 @@ com\mycompany\casino\FehlerPWVController.class
 com\mycompany\casino\ShopViewController.class
 com\mycompany\casino\FehlerDarfLoginController.class
 com\mycompany\casino\PWVergessenController.class
-com\mycompany\casino\RHomeScreenViewController.class
 com\mycompany\casino\FehlerUserNameRegistrationController.class
 com\mycompany\casino\MainGameController.class
 com\mycompany\casino\RegistrationController.class
