@@ -25,7 +25,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         App.Users = new ArrayList<User>();
-        scene = new Scene(loadFXML("MainScreen"), 1049, 601);
+        scene = new Scene(loadFXML("StartView"), 1049, 601);
         stage.setScene(scene);
         stage.show();
     }

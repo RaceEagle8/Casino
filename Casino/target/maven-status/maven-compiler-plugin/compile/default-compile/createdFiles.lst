@@ -11,6 +11,7 @@ com\mycompany\casino\FehlerUserNameRegistrationController.class
 com\mycompany\casino\MainGameController.class
 com\mycompany\casino\RegistrationController.class
 com\mycompany\casino\LoginController.class
+com\mycompany\casino\StartViewController.class
 com\mycompany\casino\FehlerBeiLoginController.class
 module-info.class
 com\mycompany\casino\WuerfelGameViewController.class
