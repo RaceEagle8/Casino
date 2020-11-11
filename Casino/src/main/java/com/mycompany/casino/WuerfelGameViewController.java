@@ -14,6 +14,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Text;
+import java.io.IOException;
+import javafx.event.ActionEvent;
 
 /**
  * FXML Controller class
@@ -22,6 +24,7 @@ import javafx.scene.text.Text;
  */
 public class WuerfelGameViewController implements Initializable {
 
+    public User wuerfeluser;
     @FXML
     private ImageView sechsR;
     @FXML
@@ -50,6 +53,10 @@ public class WuerfelGameViewController implements Initializable {
     private Text CoinsWG;
     @FXML
     private TextField inputEinsatzW;
+    @FXML
+    private Text WIN;
+    @FXML
+    private Text LevelAn;
 
     /**
      * Initializes the controller class.
@@ -59,14 +66,74 @@ public class WuerfelGameViewController implements Initializable {
         for(User user : App.getAllUsers()){
             
             if(user.getLoggedIn() == true){
-                CoinsWG.setText(String.valueOf(user.getCoins()));
+                CoinsWG.setText("Coins: " + String.valueOf(user.getCoins()));
+                wuerfeluser = user;
             }
         }
+        
+        
+        wuerfeluser.setLevel(wuerfeluser.getLevel() + 1);
+        
+        int I = 0;
+        if(wuerfeluser.getLevel() >= 10 && wuerfeluser.getLevel() < 20){
+            I = 1;
+        }
+        else if(wuerfeluser.getLevel() >= 20 && wuerfeluser.getLevel() < 30){
+            I = 2;
+        }
+        else if(wuerfeluser.getLevel() >= 30){
+            I = 3;
+        }
+        LevelAn.setText("Level: " + String.valueOf(I));
+        
+        
     }    
     
-    
+        //btnWuerfelnID    
     
     //Game Methode
+    @FXML
+    private void btnWuerfeln(ActionEvent event){
+        
+        wuerfeluser.setLevel(wuerfeluser.getLevel() + 1);
+        
+        int I = 0;
+        if(wuerfeluser.getLevel() >= 10 && wuerfeluser.getLevel() < 20){
+            I = 1;
+        }
+        else if(wuerfeluser.getLevel() >= 20 && wuerfeluser.getLevel() < 30){
+            I = 2;
+        }
+        else if(wuerfeluser.getLevel() >= 30){
+            I = 3;
+        }
+        LevelAn.setText("Level: " + String.valueOf(I));
+        
+        
+        
+        einsL.setVisible(false);
+        einsR.setVisible(false);
+        zweiL.setVisible(false);
+        zweiR.setVisible(false);
+        dreiL.setVisible(false);
+        dreiR.setVisible(false);
+        vierL.setVisible(false);
+        vierR.setVisible(false);
+        fuenfL.setVisible(false);
+        fuenfR.setVisible(false);  
+        sechsL.setVisible(false);       
+        sechsR.setVisible(false);
+        WIN.setText("");
+        
+        if(inputEinsatzW.equals("0")||inputEinsatzW.equals("")){
+            return;
+        }
+        else{
+            Spiel();
+        }
+    }
+    
+    
     
     
     public void Spiel()
@@ -105,36 +172,60 @@ public class WuerfelGameViewController implements Initializable {
         {
             einsR.setVisible(true);
             einsL.setVisible(true);
+            wuerfeluser.setCoins(wuerfeluser.getCoins() + (Einsatz * 1));
+            
+            WIN.setText("GEWONNEN: " + Einsatz * 1 + " COINS!!!");
+            
             //System.out.println("einer Pasch");
         }
         else if(wuerfel1== wuerfel2 && wuerfel1 == 2)
         {
             zweiL.setVisible(true);
             zweiR.setVisible(true);
+            wuerfeluser.setCoins(wuerfeluser.getCoins() + (Einsatz * 2));
+            
+            WIN.setText("GEWONNEN: " + Einsatz * 2 + " COINS!!!");
+            
             //System.out.println("zweier pasch");
         }
         else if(wuerfel1== wuerfel2 && wuerfel1 == 3)
         {
             dreiL.setVisible(true);
             dreiR.setVisible(true);
+            wuerfeluser.setCoins(wuerfeluser.getCoins() + (Einsatz * 3));
+            
+            WIN.setText("GEWONNEN: " + Einsatz * 4 + " COINS!!!");
+            
             //System.out.println("dreier pasch");
         }
         else if(wuerfel1== wuerfel2 && wuerfel1 == 4)
         {
             vierL.setVisible(true);
             vierR.setVisible(true);
+            wuerfeluser.setCoins(wuerfeluser.getCoins() + (Einsatz * 4));
+            
+            WIN.setText("GEWONNEN: " + Einsatz * 4 + " COINS!!!");
+            
             // System.out.println("vierer pasch");
         }
         else if(wuerfel1== wuerfel2 && wuerfel1 == 5)
         {
             fuenfL.setVisible(true);
             fuenfR.setVisible(true);
+            wuerfeluser.setCoins(wuerfeluser.getCoins() + (Einsatz * 5));
+            
+            WIN.setText("GEWONNEN: " + Einsatz * 5 + " COINS!!!");
+            
             // System.out.println("fünfer pasch");
         }
         else if(wuerfel1== wuerfel2 && wuerfel1 == 6)
         {
             sechsL.setVisible(true);
             sechsR.setVisible(true);
+            wuerfeluser.setCoins(wuerfeluser.getCoins() + (Einsatz * 6));
+            
+            WIN.setText("GEWONNEN: " + Einsatz * 6 + " COINS!!!");
+            
             //System.out.println("sechser pasch");
         }
         else if(wuerfel1 != wuerfel2)
@@ -145,6 +236,11 @@ public class WuerfelGameViewController implements Initializable {
                 if(user.getLoggedIn() == true){
                     
                     user.setCoins( user.getCoins() - Einsatz );
+                    
+                    if(user.getCoins() < 50){
+                        user.setCoins(user.getCoins() + 1000);
+                        WIN.setText(" + 1000 COINS FREE!");
+                    }
                     
                     refreshCoins();
                     
@@ -208,6 +304,7 @@ public class WuerfelGameViewController implements Initializable {
         {
             System.out.println("fehler");
         }
+        refreshCoins();
     
     }
     
@@ -268,8 +365,10 @@ public class WuerfelGameViewController implements Initializable {
             
         }
     }
-    
-    
-    
-    
+
+    @FXML
+    private void btnBack(ActionEvent event) throws IOException {
+        App.setRoot("ShopView");
+    }
+
 }

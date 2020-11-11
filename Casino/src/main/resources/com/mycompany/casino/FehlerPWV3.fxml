@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="226.0" prefWidth="426.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.mycompany.casino.FehlerPWV3Controller">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.FehlerPWV3Controller">
    <children>
-      <Text fill="RED" layoutX="22.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fehler die Passwörter stimmen nicht überein!">
+      <ImageView fitHeight="600.0" fitWidth="1000.0">
+         <image>
+            <Image url="@ImageBackground.png" />
+         </image>
+      </ImageView>
+      <Text fill="RED" layoutX="309.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fehler die Passwörter stimmen nicht überein!">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Button layoutX="187.0" layoutY="101.0" mnemonicParsing="false" onAction="#btnOKFehlerPWV3" text="OK" />
+      <Button layoutX="484.0" layoutY="275.0" mnemonicParsing="false" onAction="#btnOKFehlerPWV3" text="OK" />
    </children>
 </AnchorPane>

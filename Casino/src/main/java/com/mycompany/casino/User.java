@@ -19,7 +19,10 @@ public class User {
     public int Level;
     public boolean LoggedIn;
     
-    public User(String UserName, String EMail, String Password, boolean Darf, int Coins, int Level,boolean LoggedIn){
+    public boolean Wuerfeln;
+    public boolean Roulette;
+    
+    public User(String UserName, String EMail, String Password, boolean Darf, int Coins, int Level,boolean LoggedIn, boolean Wuerfeln, boolean Roulette){
         
         setUserName(UserName);
         setEMail(EMail);
@@ -28,6 +31,8 @@ public class User {
         setCoins(Coins);
         setLevel(Level);
         setLoggedIn(LoggedIn);
+        setWuerfeln(Wuerfeln);
+        setRoulette(Roulette);
         
     }
             
@@ -112,5 +117,25 @@ public class User {
         this.LoggedIn = LoggedIn;
     }
             
+    
+    //Würfeln
+    
+    public boolean getWuerfeln(){
+        return this.Wuerfeln;
+    }
+    
+    public void setWuerfeln(boolean Wuerfeln){
+        this.Wuerfeln = Wuerfeln;
+    }
+    
+    //Roulette
+    
+    public boolean getRoulette(){
+        return this.Roulette;
+    }
+    
+    public void setRoulette(boolean Roulette){
+        this.Roulette = Roulette;
+    }
     
 }

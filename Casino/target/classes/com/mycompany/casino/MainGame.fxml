@@ -2,6 +2,9 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -199,9 +202,19 @@
             <Font name="Felix Titling" size="59.0" />
          </font>
       </Text>
-      <Button layoutX="889.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnShop" text="SpielAuswahl" textFill="#1a8890">
+      <Button layoutX="937.0" layoutY="116.0" mnemonicParsing="false" onAction="#btnShop" prefHeight="37.0" prefWidth="98.0" text="SpielAuswahl" textFill="#1a8890">
          <font>
             <Font name="System Bold Italic" size="12.0" />
-         </font></Button>
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow color="RED" />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="RED" />
+               </light>
+            </Lighting>
+         </effect></Button>
    </children>
 </AnchorPane>

@@ -124,13 +124,15 @@ public class RegistrationController implements Initializable {
 
         boolean Darf = Dateue18(BDay);
         
-
+        boolean Wurfeln = false;
+        boolean Roulette = false;
+        
         
         int Coins = 5000;
         int Level = 0;
         
         System.out.println("Erstellung");
-        App.addUsers(UserName, EMail, Password, Darf, Coins, Level,LoggedIn);
+        App.addUsers(UserName, EMail, Password, Darf, Coins, Level,LoggedIn, Wurfeln, Roulette);
         clearInput();
         
         for(User user : App.getAllUsers()){

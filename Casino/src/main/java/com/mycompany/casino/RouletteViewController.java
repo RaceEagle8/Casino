@@ -60,6 +60,14 @@ public class RouletteViewController implements Initializable {
     
     @FXML
     private Text tfBigWin2;
+    @FXML
+    private Text LevelAn;
+    @FXML
+    private ImageView imgGreenCircle;
+    @FXML
+    private Text Ersatz;
+    @FXML
+    private Button leave;
     
     
   
@@ -71,6 +79,10 @@ public class RouletteViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        leave.setVisible(true);
+        imgGreenCircle.setVisible(false);
+        Ersatz.setText("");
+        
         
         for(User user : App.getAllUsers()){
             
@@ -94,9 +106,29 @@ public class RouletteViewController implements Initializable {
 
     @FXML
     private void btnStartRoulette(ActionEvent event) {
+        leave.setVisible(true);
         random1();
         test();
+        imgGreenCircle.setVisible(false);
+        
+        
+        RouletteUser.setLevel(RouletteUser.getLevel() + 1);
+        
+        int I = 0;
+        if(RouletteUser.getLevel() >= 10 && RouletteUser.getLevel() < 20){
+            I = 1;
+        }
+        else if(RouletteUser.getLevel() >= 20 && RouletteUser.getLevel() < 30){
+            I = 2;
+        }
+        else if(RouletteUser.getLevel() >= 30){
+            I = 3;
+        }
+        LevelAn.setText("Level: " + String.valueOf(I));
+        
+        
         startRoulette.setVisible(false);
+        einsatzButton.setVisible(true);
         tfEinsatz.setEditable(true);
         tfWetten.setEditable(true);
     }
@@ -108,15 +140,17 @@ public class RouletteViewController implements Initializable {
     public void random1(){
        Random randomNumber1 = new Random();
        int rouletteNumber;
-       rouletteNumber = 0 + randomNumber1.nextInt(1);
+       rouletteNumber = 0 + randomNumber1.nextInt(36);
        System.out.println(rouletteNumber);
        tfRandomNumber.setText(String.valueOf(rouletteNumber)); // int Wert wird als String in das Textfeld 
+       
        
     
        if(rouletteNumber == 0){
            RouletteRad.setRotate(180);
            imgRedCircle.setVisible(false);
            imgBlackCircle.setVisible(false);
+           imgGreenCircle.setVisible(true);
        }
        else if(rouletteNumber == 1){
            RouletteRad.setRotate(10);
@@ -312,7 +346,16 @@ public class RouletteViewController implements Initializable {
         int einsatz = einsatzCheckt;
         int zahlWette = wetteCheckt;
         if((rouletteNumber - zahlWette) == 0){
-           RouletteUser.setCoins(RouletteUser.getCoins() + (einsatz * 3));
+            
+            if(rouletteNumber == 0 && zahlWette == 0){
+                RouletteUser.setCoins(RouletteUser.getCoins() + (einsatz * 10));
+            }
+            else{
+                
+                RouletteUser.setCoins(RouletteUser.getCoins() + (einsatz * 3)); 
+                
+            }
+           
            System.out.println("Gewinn!");
            tfBigWin1.setVisible(true);
            tfBigWin2.setVisible(true);
@@ -480,12 +523,20 @@ public class RouletteViewController implements Initializable {
     public void refreshCoins(){
         CoinsUser.setText("Coins: " + String.valueOf(RouletteUser.getCoins()));
         einsatzButton.setVisible(true);
+        Ersatz.setText("");
     }
     
     
 
     @FXML
     private void btnEinsatz(ActionEvent event) {
+        imgBlackCircle.setVisible(false);
+        imgRedCircle.setVisible(false);
+        imgGreenCircle.setVisible(false);
+        tfRandomNumber.setText("");
+        
+        
+        
         wettenButton.setVisible(true);
         tfBigWin1.setVisible(false);
         tfBigWin2.setVisible(false);
@@ -510,6 +561,8 @@ public class RouletteViewController implements Initializable {
         CoinsAbzug();
         einsatzButton.setVisible(false);
         
+        leave.setVisible(false);
+        
         tfEinsatz.setEditable(false);
   
     }
@@ -517,9 +570,7 @@ public class RouletteViewController implements Initializable {
     @FXML
     private void btnWette(ActionEvent event) {
 
-        tfWetten.setEditable(false);
-        startRoulette.setVisible(true);
-        wettenButton.setVisible(false);
+        
 
         
         int Max = IntCheckWetten();
@@ -534,6 +585,9 @@ public class RouletteViewController implements Initializable {
             return;
         }
         
+        tfWetten.setEditable(false);
+        startRoulette.setVisible(true);
+        wettenButton.setVisible(false);
     }
 
     
@@ -547,6 +601,14 @@ public class RouletteViewController implements Initializable {
         
         int coins = UserCoins - iEinsatz;
         System.out.println(coins);
+        
+        int coins2 = coins;
+        
+        if(coins < 50){
+            coins = coins2 + 1000;
+            
+            Ersatz.setText(" + 1000 COINS FREE!");
+        }
         
         RouletteUser.setCoins(coins); 
         System.out.println(RouletteUser.getCoins());

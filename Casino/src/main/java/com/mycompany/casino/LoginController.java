@@ -60,7 +60,7 @@ public class LoginController implements Initializable {
                         
                         Users.setUserName("Banned");
                         System.out.println("AltersFehler");
-                        
+                        App.setRoot("FehlerDarfLogin");
                         return;
                     }
                 

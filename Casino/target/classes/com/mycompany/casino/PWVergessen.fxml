@@ -2,22 +2,32 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.PWVergessenController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.PWVergessenController">
    <children>
-      <Text layoutX="174.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passwort-Vergessen:" underline="true">
+      <ImageView fitHeight="600.0" fitWidth="1000.0">
+         <image>
+            <Image url="@ImageBackground.png" />
+         </image>
+      </ImageView>
+      <Text fill="RED" layoutX="374.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passwort-Vergessen:" underline="true">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Text>
-      <TextField fx:id="inputUserNamePWV" layoutX="226.0" layoutY="151.0" promptText="UserName:" />
-      <TextField fx:id="inputEMailPWV" layoutX="226.0" layoutY="188.0" promptText="E-Mail:" />
-      <Button layoutX="342.0" layoutY="349.0" mnemonicParsing="false" onAction="#btnOKPWVergessen" text="OK" />
-      <Button layoutX="226.0" layoutY="349.0" mnemonicParsing="false" onAction="#btnBackPWVergessen" text="Zurück" />
-      <TextField fx:id="inputPasswordPWV" layoutX="226.0" layoutY="227.0" promptText="Neues Passwort:" />
-      <TextField fx:id="inputPasswordWPWV" layoutX="226.0" layoutY="264.0" promptText="Passwort wiederholen:" />
+      <TextField fx:id="inputUserNamePWV" layoutX="426.0" layoutY="215.0" promptText="UserName:" />
+      <TextField fx:id="inputEMailPWV" layoutX="426.0" layoutY="252.0" promptText="E-Mail:" />
+      <Button layoutX="542.0" layoutY="413.0" mnemonicParsing="false" onAction="#btnOKPWVergessen" text="OK" textFill="RED" />
+      <Button layoutX="426.0" layoutY="413.0" mnemonicParsing="false" onAction="#btnBackPWVergessen" text="Zurück" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <TextField fx:id="inputPasswordPWV" layoutX="426.0" layoutY="291.0" promptText="Neues Passwort:" />
+      <TextField fx:id="inputPasswordWPWV" layoutX="426.0" layoutY="328.0" promptText="Passwort wiederholen:" />
    </children>
 </AnchorPane>

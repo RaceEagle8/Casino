@@ -37,8 +37,8 @@ public class App extends Application {
     
     
     //-------------------------------------------------------------------
-    public static void addUsers(String UserName, String EMail, String Password, boolean Darf, int Coins, int Level,boolean LoggedIn){
-        App.Users.add((new User(UserName, EMail, Password, Darf, Coins, Level,LoggedIn)));
+    public static void addUsers(String UserName, String EMail, String Password, boolean Darf, int Coins, int Level,boolean LoggedIn, boolean Wuerfeln, boolean Roulette){
+        App.Users.add((new User(UserName, EMail, Password, Darf, Coins, Level,LoggedIn, Wuerfeln, Roulette)));
     }
     
     public static void removeUsers(User user){

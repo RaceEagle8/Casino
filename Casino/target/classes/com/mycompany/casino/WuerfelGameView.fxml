@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,81 +10,81 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.WuerfelGameViewController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.WuerfelGameViewController">
    <children>
-      <ImageView fitHeight="338.0" fitWidth="610.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="600.0" fitWidth="1071.0" layoutX="-7.0">
          <image>
-            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/casino_wuerfel_background.jpg" />
+            <Image url="@casino_wuerfel_background.jpg" />
          </image>
       </ImageView>
-      <Text fill="#00eeff" layoutX="262.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Würfeln">
+      <Text fill="#00eeff" layoutX="446.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Würfeln" underline="true">
          <font>
-            <Font name="System Bold Italic" size="25.0" />
+            <Font name="System Bold Italic" size="43.0" />
          </font>
       </Text>
-      <ImageView fx:id="sechsR" fitHeight="150.0" fitWidth="200.0" layoutX="357.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="sechsR" fitHeight="150.0" fitWidth="200.0" layoutX="576.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/6augen.png" />
+            <Image url="@6augen.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="sechsL" fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="sechsL" fitHeight="150.0" fitWidth="200.0" layoutX="329.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/6augen.png" />
+            <Image url="@6augen.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="fuenfL" fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="fuenfL" fitHeight="150.0" fitWidth="200.0" layoutX="329.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/5augen.png" />
+            <Image url="@5augen.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="fuenfR" fitHeight="150.0" fitWidth="200.0" layoutX="357.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="fuenfR" fitHeight="150.0" fitWidth="200.0" layoutX="576.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/5augen.png" />
+            <Image url="@5augen.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="vierL" fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="vierL" fitHeight="150.0" fitWidth="200.0" layoutX="329.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/4augen.png" />
+            <Image url="@4augen.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="vierR" fitHeight="150.0" fitWidth="200.0" layoutX="357.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="vierR" fitHeight="150.0" fitWidth="200.0" layoutX="576.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/4augen.png" />
+            <Image url="@4augen.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="dreiL" fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="dreiL" fitHeight="150.0" fitWidth="200.0" layoutX="329.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/3augen.png" />
+            <Image url="@3augen.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="dreiR" fitHeight="150.0" fitWidth="200.0" layoutX="357.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="dreiR" fitHeight="150.0" fitWidth="200.0" layoutX="576.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/3augen.png" />
+            <Image url="@3augen.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="zweiL" fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="zweiL" fitHeight="150.0" fitWidth="200.0" layoutX="329.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/2augen.jpg" />
+            <Image url="@2augen.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="zweiR" fitHeight="150.0" fitWidth="200.0" layoutX="357.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="zweiR" fitHeight="150.0" fitWidth="200.0" layoutX="576.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/2augen.jpg" />
+            <Image url="@2augen.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="einsL" fitHeight="150.0" fitWidth="200.0" layoutX="110.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="einsL" fitHeight="150.0" fitWidth="200.0" layoutX="329.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/1augen.png" />
+            <Image url="@1augen.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="einsR" fitHeight="150.0" fitWidth="200.0" layoutX="357.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="einsR" fitHeight="150.0" fitWidth="200.0" layoutX="576.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../WuerfelPaula/src/main/resources/oberstufe/casino_wuerfel_s1/1augen.png" />
+            <Image url="@1augen.png" />
          </image>
       </ImageView>
-      <Text fx:id="CoinsWG" layoutX="466.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0">
+      <Text fx:id="CoinsWG" layoutX="690.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="263.0">
          <font>
-            <Font name="System Bold Italic" size="29.0" />
+            <Font name="System Bold Italic" size="47.0" />
          </font>
          <fill>
             <RadialGradient centerX="0.43333333333333335" centerY="0.5" radius="0.5">
@@ -94,6 +95,45 @@
             </RadialGradient>
          </fill>
       </Text>
-      <TextField fx:id="inputEinsatzW" layoutX="14.0" layoutY="91.0" promptText="Einsatz:" />
+      <Text fx:id="LevelAn" layoutX="690.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="263.0">
+         <font>
+            <Font name="System Bold Italic" size="41.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="RED" />
+                  <Stop color="#800202" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <Button layoutX="33.0" layoutY="533.0" mnemonicParsing="false" onAction="#btnBack" prefHeight="46.0" prefWidth="80.0" text="Zurück">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <TextField fx:id="inputEinsatzW" layoutX="262.0" layoutY="509.0" onKeyTyped="#maxCheck" prefHeight="57.0" prefWidth="208.0" promptText="Einsatz:">
+         <font>
+            <Font size="27.0" />
+         </font></TextField>
+      <Button layoutX="678.0" layoutY="509.0" mnemonicParsing="false" onAction="#btnWuerfeln" prefHeight="57.0" prefWidth="99.0" text="Spielen">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Text fx:id="WIN" layoutY="300.0" rotate="15.9" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="1000.0">
+         <font>
+            <Font name="Britannic Bold" size="90.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#00ff1e" />
+                  <Stop color="#003c16" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
    </children>
 </AnchorPane>
