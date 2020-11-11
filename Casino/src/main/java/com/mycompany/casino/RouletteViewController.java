@@ -84,6 +84,8 @@ public class RouletteViewController implements Initializable {
         Ersatz.setText("");
         
         
+        
+        
         for(User user : App.getAllUsers()){
             
             if(user.getLoggedIn() == true){
@@ -93,6 +95,19 @@ public class RouletteViewController implements Initializable {
             }
             
         }
+        
+        int I = 0;
+        if(RouletteUser.getLevel() >= 10 && RouletteUser.getLevel() < 20){
+            I = 1;
+        }
+        else if(RouletteUser.getLevel() >= 20 && RouletteUser.getLevel() < 30){
+            I = 2;
+        }
+        else if(RouletteUser.getLevel() >= 30){
+            I = 3;
+        }
+        LevelAn.setText("Level: " + String.valueOf(I));
+        
         
     }    
     
@@ -143,7 +158,7 @@ public class RouletteViewController implements Initializable {
        rouletteNumber = 0 + randomNumber1.nextInt(36);
        System.out.println(rouletteNumber);
        tfRandomNumber.setText(String.valueOf(rouletteNumber)); // int Wert wird als String in das Textfeld 
-       
+       Ersatz.setText("");
        
     
        if(rouletteNumber == 0){
@@ -523,7 +538,7 @@ public class RouletteViewController implements Initializable {
     public void refreshCoins(){
         CoinsUser.setText("Coins: " + String.valueOf(RouletteUser.getCoins()));
         einsatzButton.setVisible(true);
-        Ersatz.setText("");
+        
     }
     
     

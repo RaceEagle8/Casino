@@ -14,9 +14,9 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.mycompany.casino.StartViewController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1049.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.mycompany.casino.StartViewController">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="1000.0">
+      <ImageView fitHeight="600.0" fitWidth="1049.0">
          <image>
             <Image url="@Casino%20StartScreen.png" />
          </image>
@@ -29,9 +29,9 @@
             <Glow level="1.0" />
          </effect>
       </Text>
-      <Text fill="#00d9ff" layoutX="269.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CASINO" wrappingWidth="587.1679992675781">
+      <Text fill="#00d9ff" layoutX="288.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CASINO" wrappingWidth="587.1679992675781">
          <font>
-            <Font name="Zero Twos" size="130.0" />
+            <Font name="Zero Twos" size="135.0" />
          </font>
          <effect>
             <Glow level="1.0" />
