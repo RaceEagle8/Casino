@@ -58,6 +58,8 @@ public class LoginController implements Initializable {
                 
                     if(Users.getDarf() == false){
                         
+                        //Falls User nicht Altgenung ist wird seine E-Mail geblockt
+                        
                         Users.setUserName("Banned");
                         System.out.println("AltersFehler");
                         App.setRoot("FehlerDarfLogin");

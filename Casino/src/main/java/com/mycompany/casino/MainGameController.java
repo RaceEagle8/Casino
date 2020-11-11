@@ -101,7 +101,7 @@ public class MainGameController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        
+        //Live Coins so wie User Update
             
         for(User user : App.getAllUsers()){
             if(user.getLoggedIn() == true){
@@ -127,6 +127,10 @@ public class MainGameController implements Initializable {
 
     }    
 
+    
+    
+    //Zum Shop
+    
     @FXML
     private void btnShop(ActionEvent event) throws IOException {
         App.setRoot("ShopView");
@@ -135,6 +139,8 @@ public class MainGameController implements Initializable {
         
     }
 
+    //Logout
+    
     @FXML
     private void btnLoggOut(ActionEvent event) throws IOException {
         for(User user : App.getAllUsers()){
@@ -147,8 +153,12 @@ public class MainGameController implements Initializable {
     }
     
     
+    //Starten des Games
+    
     @FXML
     private void btnSpielen(ActionEvent event) throws IOException {
+        
+        //Überprüfung des Einsatzes 
         
         int Einsatz = IntCheckEinsatz();
         
@@ -157,19 +167,21 @@ public class MainGameController implements Initializable {
             return;
         }
         
+        //Naricht nach dem Gewinn
+        
         if(Erreicht.getText().equals("") == false){
             
-            try{
-                Thread.sleep(250);
-            } catch (InterruptedException ex) {
-                ex.printStackTrace();
-            }
+            //try{
+            //    Thread.sleep(250);
+            //} catch (InterruptedException ex) {
+            //    ex.printStackTrace();
+            //}
             
             Erreicht.setText("");
         }
         
         
-        
+        //Start der Spiel-Methode
         
         Spiel(Einsatz);
 
@@ -178,8 +190,12 @@ public class MainGameController implements Initializable {
     }
     
     
+    //Spiel-Methode
+    
     public void Spiel(int Einsatz) throws IOException{
         
+      
+        //Bilder werden unsichtbar
         
         DiaSlot1.setVisible(false);
         DiaSlot2.setVisible(false);
@@ -210,6 +226,8 @@ public class MainGameController implements Initializable {
         sevenSlot3.setVisible(false);
         
         
+        
+        //Randoms Stuff
         
         
         //Slot1 Final
@@ -353,6 +371,8 @@ public class MainGameController implements Initializable {
 
         }
         
+        
+        //GEWINNE
         
         
         if(slotone == slottwo && slottwo == slotthree && slotone == slotthree){
@@ -557,6 +577,8 @@ public class MainGameController implements Initializable {
         
     }
     
+   
+    //FreeSpin Methode
     
     public void FreeSpins(User user, int Einsatz) throws IOException{
         System.out.println("Freespins");

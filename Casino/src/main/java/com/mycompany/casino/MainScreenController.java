@@ -8,6 +8,8 @@ public class MainScreenController {
 
     
 
+    //Wahl zwischen Login und Registrierung
+    
     @FXML
     private void btnLogin(ActionEvent event) throws IOException {
         App.setRoot("Login");
